@@ -21,7 +21,7 @@
 
     <button type="button" onclick="StartTime()" style="background-color: yellowgreen ;">
         Start Timer</button>
-    <button type="button"  onclick="RecordReact()" style="background-color: yellow ;">
+    <button type="button" onclick="RecordReact()" style="background-color: yellow ;">
         React Now</button>
 
     <script>
@@ -31,25 +31,25 @@
             console.log(MyTime);
         }
         function StartTime() {
-            const  countDown = Math.random() * 9;
-      let randomvalue = Math.floor(countDown) + 2;
-      console.log(randomvalue);
-      for(let i = 0; i < randomvalue; i++){
-        setTimeout(()=>{document.getElementById("countdown").innerHTML=i},(randomvalue-i)*1000);
-      }
-            
-        
+            const countDown = Math.random() * 9;
+            let randomvalue = Math.floor(countDown) + 2;
+            console.log(randomvalue);
+            for (let i = 0; i < randomvalue; i++) {
+                setTimeout(() => { document.getElementById("countdown").innerHTML = i }, (randomvalue - i) * 1000);
+            }
 
-        setTimeout(function () {
-            if (MyTime == undefined) {
-                document.getElementById("target").innerHTML = "Too Slow";
-            }
-            else {
-                var btnTime = Date.now();
-                document.getElementById("target").innerHTML = "Time was " + (btnTime - MyTime);
-            }
-        }, 3000);
-    }
+
+
+            setTimeout(function () {
+                if (MyTime == undefined) {
+                    document.getElementById("target").innerHTML = "Too Slow";
+                }
+                else {
+                    var btnTime = Date.now();
+                    document.getElementById("target").innerHTML = "Time was " + (btnTime - MyTime);
+                }
+            }, 3000);
+        }
 
     </script>
 
